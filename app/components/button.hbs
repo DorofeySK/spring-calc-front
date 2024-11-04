@@ -1,1 +1,3 @@
-{{yield}}
+<div class="button">
+    <button type="button" {{on 'click' (fn this.sendValue @text)}}>{{@text}}</button>
+</div>
