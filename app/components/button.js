@@ -1,9 +1,12 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
+import { service } from '@ember/service';
 
 export default class ButtonComponent extends Component {
-    @action
-    showButton(text) {
-        alert(`Button ${text} pressed`);
-    }
+  @service('calculator-input') calculator_input;
+
+  @action
+  sendValue(value) {
+    this.calculator_input.add(value);
+  }
 }
