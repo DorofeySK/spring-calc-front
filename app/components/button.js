@@ -6,7 +6,7 @@ export default class ButtonComponent extends Component {
   @service('calculator-input') calculator_input;
 
   @action
-  sendValue(value) {
+  actionF(value) {
     this.calculator_input.add(value);
   }
 }
