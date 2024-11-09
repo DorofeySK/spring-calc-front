@@ -10,4 +10,8 @@ export default class InputOutputFieldComponent extends Component {
   get fieldValue() {
     return this.calculator_input.field_value;
   }
+
+  get lastValue() {
+    return this.calculator_input.last_value;
+  }
 }

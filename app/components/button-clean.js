@@ -2,11 +2,11 @@ import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { service } from '@ember/service';
 
-export default class ButtonComponent extends Component {
+export default class ButtonClearComponent extends Component {
   @service('calculator-input') calculator_input;
 
   @action
-  addNumber(value) {
-    this.calculator_input.add(value);
+  clear(oper) {
+    this.calculator_input.remove();
   }
 }
