@@ -28,9 +28,34 @@ body {
     transform: translate(-50%, -50%)  
 }
 
+.button:hover {
+    background-color: #B7B7B7;
+}
+
 .field {
     width: 445px;
     height: 200px;
     background-color: #D66426;
     border-radius: 10px;
+    grid-column-start: 1; 
+    grid-column-end: 5;
+    
+    display: grid;
+    grid-template-rows: 25% 25%;
+    text-align: end;
+}
+
+.field .last_value {
+    padding: 5px;
+}
+
+.field .current_value {
+    padding: 5px;
+}
+
+.main {
+    width: 450px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
 }
