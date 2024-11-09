@@ -4,10 +4,14 @@ import { tracked } from '@glimmer/tracking';
 import { service } from '@ember/service';
 
 export default class InputOutputFieldComponent extends Component {
-    @service('calculator-input') calculator_input;
+  @service('calculator-input') calculator_input;
 
-    @computed('calculator_input.field_value')
-    get fieldValue() {
-        return this.calculator_input.field_value;
-    }
+  @computed('calculator_input.field_value')
+  get fieldValue() {
+    return this.calculator_input.field_value;
+  }
+
+  get lastValue() {
+    return this.calculator_input.last_value;
+  }
 }
