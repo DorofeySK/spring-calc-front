@@ -6,7 +6,7 @@ export default class ButtonResultComponent extends Component {
   @service('calculator-input') calculator_input;
 
   @action
-  result(oper) {
+  result() {
     this.calculator_input.result();
   }
 }
