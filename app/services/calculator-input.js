@@ -58,6 +58,8 @@ export default class CalculatorInputService extends Service {
       case '*':
         oper = 'mult';
         break;
+      default:
+        return;
     }
     let rs = await fetch('http://127.0.0.1:8080/api/' + oper, {
       method: 'POST',
@@ -69,8 +71,9 @@ export default class CalculatorInputService extends Service {
         second: this.field_value,
       }),
     });
-    console.log(rs.json);
-    this.field_value = rs.json[oper];
+    let result = await rs.json() 
+    console.log(result);
+    this.field_value = result[oper];
     this.last_value = '';
     this.operation = '';
   }
